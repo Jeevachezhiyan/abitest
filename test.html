@@ -1,0 +1,46 @@
+<form action="http://localhost/jeeva2/test.php" method="post" onclick="myfunction()">
+
+	Name:<input type="name" name="name" id="name" value="">
+	<br>
+	Email:<input type="email" name="email" id="email" value="">
+	<br>
+	Password:<input type="password" name="password" id="password" value="">
+	<br>
+	Mobilenumber<input type="mobilenumber" name="mobilenumber" id="mobilenumber" value="">
+	<br>
+	<input type="submit" name="submit">
+	
+</form>
+
+<script type="text/javascript">
+function myfunction()
+{
+    var name = document.getElementById('name').value;
+
+
+    var email =  document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    var mobilenumber = document.getElementById('mobilenumber').value;
+
+    if(password == '')
+    {
+    	alert('please enter password');
+    	return false;
+    }
+    else
+    {
+    	return true;
+    }
+
+    if(isNaN(mobilenumber))
+    {
+    	alert('please enter valid number');
+    	return false;
+    }
+    else
+    {
+    	return true;
+    }
+
+}
+</script>
